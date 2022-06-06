@@ -1,290 +1,338 @@
+<!-- ============================================================== -->
+<!-- main wrapper -->
+<!-- ============================================================== -->
+<div class="dashboard-main-wrapper">
+  <!-- ============================================================== -->
+  <!-- navbar -->
+  <!-- ============================================================== -->
+  <div class="dashboard-header">
+    <nav class="navbar navbar-expand-lg bg-white fixed-top" id="navAdmin">
+      <a class="navbar-brand" href="index.html"
+        >BIP <a style="color: rgb(255, 238, 0)">bip</a></a
+      >
 
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top d-flex align-items-center">
-
-    <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="o d-flex align-items-center">
-        <img src="assets/img/o.png" alt="">
-        <span class="d-none d-lg-block">NiceAdmin</span>
-      </a>
-      <i class="bi bi-list toggle-sidebar-btn"></i>
-    </div><!-- End o -->
-    <div class="d-flex align-items-center justify-content-between">
-      
-     
-    </div><!-- End o -->
-
-    <div class="search-bar">
-      <form class="search-form d-flex align-items-center" method="POST" action="#">
-        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-      </form>
-    </div><!-- End Search Bar -->
-
-    <nav class="header-nav ms-auto">
-      <ul class="d-flex align-items-center">
-
-        <li class="nav-item d-block d-lg-none">
-          <a class="nav-link nav-icon search-bar-toggle " href="#">
-            <i class="bi bi-search"></i>
-          </a>
-        </li><!-- End Search Icon all client-->
-
-        <li class="nav-item dropdown">
-
-          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-            <i class="bi bi-bell"></i>
-            <span class="badge bg-primary badge-number">4</span>
-          </a><!-- End Notification pagesIcon -->
-
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
-            <li class="dropdown-header">
-              You have 4 new notifications
-              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="notification-item">
-              <i class="bi bi-exclamation-circle text-warning"></i>
-              <div>
-                <h4>Lorem Ipsum</h4>
-                <p>Quae dolorem earum veritatis oditseno</p>
-                <p>30 min. ago</p>
-              </div>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="notification-item">
-              <i class="bi bi-x-circle text-danger"></i>
-              <div>
-                <h4>Atque rerum nesciunt</h4>
-                <p>Quae dolorem earum veritatis oditseno</p>
-                <p>1 hr. ago</p>
-              </div>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="notification-item">
-              <i class="bi bi-check-circle text-success"></i>
-              <div>
-                <h4>Sit rerum fuga</h4>
-                <p>Quae dolorem earum veritatis oditseno</p>
-                <p>2 hrs. ago</p>
-              </div>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="notification-item">
-              <i class="bi bi-info-circle text-primary"></i>
-              <div>
-                <h4>Dicta reprehenderit</h4>
-                <p>Quae dolorem earum veritatis oditseno</p>
-                <p>4 hrs. ago</p>
-              </div>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li class="dropdown-footer">
-              <a href="#">Show all notifications</a>
-            </li>
-
-          </ul><!-- End Notification Dropdown Items -->
-
-        </li><!-- End Notification Nav -->
-
-        <li class="nav-item dropdown">
-
-          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-            <i class="bi bi-chat-left-text"></i>
-            <span class="badge bg-success badge-number">3</span>
-          </a><!-- End Messages Icon -->
-
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
-            <li class="dropdown-header">
-              You have 3 new messages
-              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="message-item">
-              <a href="#">
-                <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
-                <div>
-                  <h4>Maria Hudson</h4>
-                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  <p>4 hrs. ago</p>
+      <div>
+        <ul id="ul-nav-admin">
+          <li class="nav-item dropdown notification">
+            <a
+              class="nav-link nav-icons"
+              href="#"
+              id="navbarDropdownMenuLink1"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              ><i class="fas fa-fw fa-bell"></i> <span class="indicator"></span
+            ></a>
+            <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
+              <li>
+                <div class="notification-title">Notification</div>
+                <div class="notification-list">
+                  <div class="list-group">
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action active"
+                    >
+                      <div class="notification-info">
+                        <div class="notification-list-user-img">
+                          <img
+                            src="assets/adm/images/avatar-2.jpg"
+                            alt=""
+                            class="user-avatar-md rounded-circle"
+                          />
+                        </div>
+                        <div class="notification-list-user-block">
+                          <span class="notification-list-user-name"
+                            >Jeremy Rakestraw</span
+                          >accepted your invitation to join the team.
+                          <div class="notification-date">2 min ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                      <div class="notification-info">
+                        <div class="notification-list-user-img">
+                          <img
+                            src="assets/adm/images/avatar-3.jpg"
+                            alt=""
+                            class="user-avatar-md rounded-circle"
+                          />
+                        </div>
+                        <div class="notification-list-user-block">
+                          <span class="notification-list-user-name"
+                            >John Abraham </span
+                          >is now following you
+                          <div class="notification-date">2 days ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                      <div class="notification-info">
+                        <div class="notification-list-user-img">
+                          <img
+                            src="assets/adm/images/avatar-4.jpg"
+                            alt=""
+                            class="user-avatar-md rounded-circle"
+                          />
+                        </div>
+                        <div class="notification-list-user-block">
+                          <span class="notification-list-user-name"
+                            >Monaan Pechi</span
+                          >
+                          is watching your main repository
+                          <div class="notification-date">2 min ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                      <div class="notification-info">
+                        <div class="notification-list-user-img">
+                          <img
+                            src="assets/adm/images/avatar-5.jpg"
+                            alt=""
+                            class="user-avatar-md rounded-circle"
+                          />
+                        </div>
+                        <div class="notification-list-user-block">
+                          <span class="notification-list-user-name"
+                            >Jessica Caruso</span
+                          >accepted your invitation to join the team.
+                          <div class="notification-date">2 min ago</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
                 </div>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="message-item">
-              <a href="#">
-                <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
-                <div>
-                  <h4>Anna Nelson</h4>
-                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  <p>6 hrs. ago</p>
+              </li>
+              <li>
+                <div class="list-footer">
+                  <a href="#">View all notifications</a>
                 </div>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="message-item">
-              <a href="#">
-                <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
-                <div>
-                  <h4>David Muldon</h4>
-                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  <p>8 hrs. ago</p>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown connection">
+            <a
+              class="nav-link"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="fas fa-fw fa-th"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right connection-dropdown">
+              <li class="connection-list">
+                <div class="row">
+                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                    <a href="#" class="connection-item"
+                      ><img src="assets/adm/images/github.png" alt="" />
+                      <span>Github</span></a
+                    >
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                    <a href="#" class="connection-item"
+                      ><img src="assets/adm/images/dribbble.png" alt="" />
+                      <span>Dribbble</span></a
+                    >
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                    <a href="#" class="connection-item"
+                      ><img src="assets/adm/images/dropbox.png" alt="" />
+                      <span>Dropbox</span></a
+                    >
+                  </div>
                 </div>
-              </a>
+                <div class="row">
+                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                    <a href="#" class="connection-item"
+                      ><img src="assets/adm/images/bitbucket.png" alt="" />
+                      <span>Bitbucket</span></a
+                    >
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                    <a href="#" class="connection-item"
+                      ><img
+                        src="assets/adm/images/mail_chimp.png"
+                        alt=""
+                      /><span>Mail chimp</span></a
+                    >
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                    <a href="#" class="connection-item"
+                      ><img src="assets/adm/images/slack.png" alt="" />
+                      <span>Slack</span></a
+                    >
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="conntection-footer"><a href="#">More</a></div>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown nav-user">
+            <a
+              class="nav-link nav-user-img"
+              href="#"
+              id="navbarDropdownMenuLink2"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              ><img
+                src="assets/adm/images/utilisateur.png"
+                alt=""
+                class="user-avatar-md rounded-circle"
+            /></a>
+            <div
+              class="dropdown-menu dropdown-menu-right nav-user-dropdown"
+              aria-labelledby="navbarDropdownMenuLink2"
+            >
+              <div class="nav-user-info">
+                <h5 class="mb-0 text-white nav-user-name">{{ username }}</h5>
+                <span class="status"></span><span class="ml-2">{{ role }}</span>
+              </div>
+              <a routerLink="/admin/moncompte" class="dropdown-item" href="#"
+                ><i class="fas fa-user mr-2"></i>Profile</a
+              >
+              <a class="dropdown-item" href="#"
+                ><i class="fas fa-cog mr-2"></i>Setting</a
+              >
+              <a class="dropdown-item" (click)="logout()" 
+                ><i class="fas fa-power-off mr-2"></i>Logout</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- ============================================================== -->
+  <!-- end navbar -->
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- left sidebar -->
+  <!-- ============================================================== -->
+  <div class="nav-left-sidebar sidebar-dark">
+    <div class="menu-list">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav flex-column">
+            <li class="nav-divider">Menu</li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-expanded="false"
+                data-target="#submenu-1"
+                aria-controls="submenu-1"
+                routerLink="dashboard"
+                ><i class="fa fa-fw fa-user-circle"></i>Dashboard
+                <span class="badge badge-success">6</span></a
+              >
             </li>
-            <li>
-              <hr class="dropdown-divider">
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+                aria-expanded="false"
+                data-target="#submenu-9"
+                aria-controls="submenu-9"
+                routerLink="commands"
+                ><i class="fa fa-archive"></i>Commandes</a
+              >
             </li>
 
-            <li class="dropdown-footer">
-              <a href="#">Show all messages</a>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-expanded="false"
+                data-target="#submenu-1"
+                aria-controls="submenu-1"
+                routerLink="client"
+                ><i class="fa fa-users"></i>Clients
+                <span class="badge badge-success">6</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-expanded="false"
+                data-target="#submenu-1"
+                aria-controls="submenu-1"
+                routerLink="livreurs"
+                ><i class="fa fa-truck"></i>Livreurs<span
+                  class="badge badge-success"
+                  >6</span
+                ></a
+              >
             </li>
 
-          </ul><!-- End Messages Dropdown Items -->
-
-        </li><!-- End Messages Nav -->
-
-        <li class="nav-item dropdown pe-3">
-
-          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/admin/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">{{username}}</span>
-          </a><!-- End Profile Iamge Icon -->
-
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-            <li class="dropdown-header">
-              <h6>{{username}}</h6>
-              <span>{{role}}</span>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
+            <li class="nav-divider">Quoi de neuf ?</li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-expanded="false"
+                data-target="#submenu-1"
+                aria-controls="submenu-1"
+                routerLink="messages"
+                ><i class="fa fa-envelope" aria-hidden="true"></i>Messages
+                <span class="badge badge-success">6</span></a
+              >
             </li>
 
-            <li>
-              <a class="dropdown-item d-flex align-items-center" routerLink="/admin/moncompte" >
-                <i class="bi bi-person"></i>
-                <span>My Profile</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                <i class="bi bi-gear"></i>
-                <span>Account Settings</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                <i class="bi bi-question-circle"></i>
-                <span>Need Help?</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" (click)="logout()">
-                <i class="bi bi-box-arrow-right"></i>
-                <span>Sign Out</span>
-              </a>
-            </li>
-
-          </ul><!-- End Profile Dropdown Items -->
-        </li><!-- End Profile Nav -->
-
-      </ul>
-    </nav><!-- End Icons Navigation -->
-
-  </header><!-- End Header -->
-
-  <!-- ======= Sidebar ======= -->
-  <aside id="sidebar" class="sidebar">
-
-    <ul class="sidebar-nav" id="sidebar-nav">
-
-   
-      <li class="nav-heading">Pages</li>
-      <li class="nav-item">
-        <a class="nav-link collapsed" routerLink="dashboard">
-          <i class="bi bi-person"></i>
-          <span>dashboard</span>
-        </a>
-      </li><!-- End Profile Page Nav -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" routerLink="client">
-          <i class="bi bi-person"></i>
-          <span>Les Clients</span>
-        </a>
-      </li><!-- End Profile Page Nav -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" routerLink="commands">
-          <i class="bi bi-person"></i>
-          <span>Les Commandes</span>
-        </a>
-      </li><!-- End Profile Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" routerLink="livreurs">
-          <i class="bi bi-question-circle"></i>
-          <span>Livreurs</span>
-        </a>
-      </li><!-- End F.A.Q Page Nav -->
-
-    </ul>
-
-  </aside><!-- End Sidebar-->
-
- <router-outlet></router-outlet>
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-    <div class="copyright">
-      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+            <!-- <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-9" aria-controls="submenu-9"><i class="fas fa-fw fa-map-marker-alt"></i>Maps</a>
+                                <div id="submenu-9" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/map-google.html">Google Maps</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/map-vector.html">Vector Maps</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li> -->
+          </ul>
+        </div>
+      </nav>
     </div>
-    <div class="credits">
-      <!-- All the links in the footer should remain intact. -->
-      <!-- You can delete the links only if you purchased the pro version. -->
-      <!-- Licensing information: https://bootstrapmade.com/license/ -->
-      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+  </div>
+  <!-- ============================================================== -->
+  <!-- end left sidebar MENU -->
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- wrapper  -->
+  <!-- ============================================================== -->
+  <div class="dashboard-wrapper">
+    <div class="dashboard-ecommerce py-4">
+      <router-outlet></router-outlet>
+      <!-- ============================================================== -->
+      <!-- end footer Dashboard Template-->
+      <!-- ============================================================== -->
     </div>
-  </footer><!-- End Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
+    <!-- ============================================================== -->
+    <!-- end wrapper  -->
+    <!-- ============================================================== -->
+  </div>
+  <!-- ============================================================== -->
+  <!-- end main wrapper  -->
+  <!-- ============================================================== -->
+  <!-- Optional JavaScript -->
+  <!-- jquery 3.3.1 -->
+</div>

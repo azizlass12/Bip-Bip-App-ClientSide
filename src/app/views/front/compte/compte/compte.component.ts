@@ -26,7 +26,7 @@ export class CompteComponent implements OnInit {
 
     this.ds.getById(this._id).subscribe((response: any) => {
       // get all-comman
-      this.dataArray = response.data.data;
+      this.dataArray = response.data.doc;
       this.registerForm = new FormGroup({
         name: new FormControl(this.dataArray ? this.dataArray.name : ''),
         email: new FormControl(this.dataArray ? this.dataArray.email : ''),

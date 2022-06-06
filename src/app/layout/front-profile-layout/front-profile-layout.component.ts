@@ -11,8 +11,14 @@ import { AuthuserService } from 'src/app/views/srvices/authuser.service';
 export class FrontProfileLayoutComponent implements OnInit {
   username:any
   name:any
-    constructor(private ads:AuthCoursierService,private route:Router) {
-    
+  verif: boolean;
+    constructor(private aus:AuthuserService,private route:Router) {
+      this.username=this.aus.getusername()
+      if (this.aus.loggedIn()==true){
+        this.verif=true
+      }else{this.verif=false
+  
+    }
     
     // this.username=this.ads.getusername()
     // if(this.ads.loggedIn()==true){

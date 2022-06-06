@@ -12,20 +12,18 @@ import { AuthuserService } from 'src/app/views/srvices/authuser.service';
 export class RegistreComponent implements OnInit {
   messageError: any;
   emailPattern = '^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$';
+  emailPattern1 = '^[@[0-9]';
+  loading = false;
+
   email: any;
   constructor(private aus: AuthuserService, private route: Router) {}
 
   ngOnInit(): void {}
-  // add(f:any){
-  // let data=f.value
-  // console.log(data)
-  // this.ds.updateprofilelivreure(data).subscribe(data=>{
-  //   this.route.navigate(['/profile/livreur'])
-  //   })
 
-  //  }
   registre(f: any) {
     let data = f.value;
+    this.loading = true;
+
     this.aus.registre(data).subscribe(
       (data) => {
         this.route.navigate(['/login']);
@@ -35,6 +33,7 @@ export class RegistreComponent implements OnInit {
       (err: HttpErrorResponse) => {
         this.messageError = err.error.message.errors;
         console.log(err.error.message.errors.adress.message);
+        this.loading = false;
 
         console.log(err);
 

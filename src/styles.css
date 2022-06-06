@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+#mobile-btn {
+    display: none;
+}
+
+@media only screen and (max-width: 1210px) {
+    #mobile-btn {
+        display: block;
+    }
+  }
+ 
+/* body{
+     overflow-y: hidden;
+} */

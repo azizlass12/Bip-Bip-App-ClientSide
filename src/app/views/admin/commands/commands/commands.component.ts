@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/views/srvices/data.service';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-commands',
   templateUrl: './commands.component.html',
@@ -20,19 +21,22 @@ export class CommandsComponent implements OnInit {
 
   // }
   // messagesuccsess=''
-  constructor(private ds: DataService) {
+  constructor(private ds: DataService, private route:Router) {
     this.ds.getallcommands().subscribe((response: any) => {
       // get all-comman
-      this.dataArray = response.data.data;
+      this.dataArray = response.data.doc
       console.log(this.dataArray);
     });
   }
   ngOnInit(): void {}
   delete(id:any,i:number){
-  this.ds.deletecommande(id).subscribe(Response=>{
+  this.ds.deletecCmmandeFoeAdmin(id).subscribe(Response=>{
     console.log(Response)
     this.dataArray.splice(i,1)
   })
+  }
+  details(id:any,i:any){
+    this.route.navigate(['admin/details/'+id])
   }
   //   }
 

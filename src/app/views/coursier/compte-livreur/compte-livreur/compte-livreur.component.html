@@ -1,14 +1,9 @@
 
 
-    <div class="container rounded bg-white mt-5 mb-5">
+    <div class="container rounded bg-white mt-5 mb-5" >
         <ng-container [formGroup]="registerForm">
         <div class="row">
-            <div class="col-md-3 border-right">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQF2psCzfbB611rnUhxgMi-lc2oB78ykqDGYb4v83xQ1pAbhPiB&usqp=CAU"><span
-                        class="font-weight-bold">Amelly</span><span class="text-black-50">amelly12@bbb.com</span><span>
-                    </span></div>
-            </div>
+            
             <div class="col-md-5 border-right">
                 <div class="p-3 ">
                     
@@ -33,8 +28,7 @@
                         <div class="col-md-6"><label class="labels">State/Region</label><input type="text"
                                 class="form-control" value="" placeholder="state"></div>
                     </div>
-                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button"  type="button" (click)="updateUser()"  >Save
-                            Profile</button></div>
+                    
                 </div>
             </div>
             <div class="col-md-4">
@@ -48,7 +42,10 @@
                             class="form-control" placeholder="experience" value=""></div> <br>
                     <div class="col-md-12"><label class="labels">Additional Details</label><input type="text"
                             class="form-control" placeholder="additional details" value=""></div>
+                            <div class="mt-5 text-center"><button class="btn btn-primary profile-button"  type="button" (click)="updateUser()"  >Save
+                                Profile</button></div>
                 </div>
+                
             </div>
         </div>
     </ng-container>

@@ -6,11 +6,13 @@ import { HomeComponent } from './home/home.component';
 import { IntroHomeComponent } from './intro-home/intro-home.component';
 
 
+
+
 @NgModule({
   declarations: [
     HomeComponent,
     IntroHomeComponent,
-    IntroHomeComponent
+  
   ],
   imports: [
     CommonModule,

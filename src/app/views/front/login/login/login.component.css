@@ -8,3 +8,7 @@
     background-size: cover;
     background-position: center center
 }
+.bt{
+    background: linear-gradient(to right, #ff6241, #f22c2f);
+    color:aliceblue;    
+}

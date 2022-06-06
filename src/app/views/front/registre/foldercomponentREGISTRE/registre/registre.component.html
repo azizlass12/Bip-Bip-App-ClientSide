@@ -1,33 +1,47 @@
+
 <form class="" #f="ngForm" (ngSubmit)="registre(f)">
+
   <div class="container d-flex justify-content-center align-items-center">
     <div class="card b">
+<div type="submit" routerLink="/" >          <a ><i class=" fa fa-home"></i>  /Home</a>
+</div>
       <div class="row">
         <div class="col-md-6">
           <div class="form">
             <div class="mt-2">
-              <span>Nom et Prénom </span>
-              <input type="text" class="form-control" placeholder="Name" required name="name" #name="ngModel"
+              <span>Nom  </span><strong style="float:right;" class="alerts p" *ngIf="name.errors?.required && name">
+                *             </strong>
+              <input type="text" class="form-control" placeholder="Name" name required name="name" #name="ngModel"
                 ngModel />
+              
+                
             </div>
-
             <div class="mt-2">
-              <span>Email</span>
+              <span>Prénom </span><strong style="float:right;" class="alerts p" *ngIf="prenom.errors?.required && prenom">
+                *             </strong>
+              <input type="text" class="form-control" placeholder="Prénom" prenom required name="prenom" #prenom="ngModel"
+                ngModel />
+            
+            </div>
+ 
+            <div class="mt-2">
+              <span>Email</span><strong style="float:right;" class="alerts p" *ngIf="email.errors?.required && email">
+                *             </strong>
               <input type="email" placeholder="Email"  [pattern]="emailPattern" class="form-control"  email required name="email" #email="ngModel"
                 ngModel />
-              <p class="alert alert-danger" *ngIf="email.touched && email.errors?.pattern">
-                  this input should be a valid email
+              <p class="alerts p" *ngIf="email && email.errors?.pattern">
+                Cette entrée doit être un e-mail valide
               </p>
             </div>
 
             <div class="mt-2">
-              <span>Mot de passe</span>
+              <span>Mot de passe</span><strong style="float:right;" class="alerts p" *ngIf="password.errors?.required && password">
+                *             </strong>
               <input type="password" minlength="8" class="form-control" placeholder="password" required name="password"
                 #password="ngModel" ngModel />
-              <p class="alert alert-danger" *ngIf="password.errors?.required && password.touched">
-                this input password is required
-              </p>
-              <p class="alerts" *ngIf="password.errors?.minlength">
-                this input must +8 caracter required
+              
+              <p class="alerts p" *ngIf="password.errors?.minlength">
+                cette entrée doit +8 caractères requis
               </p>
             </div>
 
@@ -37,53 +51,90 @@
               <span>Confirmer Mot de passe</span>
               <input type="password" minlength="8" class="form-control" placeholder="passwordConfirm" required
                 name="passwordConfirm" #passwordConfirm="ngModel" ngModel />
-              <p class="alert alert-danger" *ngIf="
+              <p class="alerts p" *ngIf="
                   passwordConfirm.errors?.minlength
                 ">
-                this input must +8 caracter required
+                cette entrée doit +8 caractères requis
               </p>
-              <p class="alerts" *ngIf="passwordConfirm.value !== password.value">
-                do not match
+              <p class="alerts p" *ngIf="passwordConfirm.value !== password.value">
+                Les deux mots de passe doivent correspondre              
               </p>
+             
             </div>
+        
+            <p>Tu est ?</p>
+            <label class="custom-control custom-radio custom-control-inline">
+                <input type="radio" name="radio-inline" value="client" name="role" checked="" class="custom-control-input"><span class="custom-control-label">Client</span>
+            </label>
+            <label class="custom-control custom-radio custom-control-inline">
+                <input type="radio" name="radio-inline" class="custom-control-input" value="employee" name="role"><span class="custom-control-label">livreur</span>
+            </label>
 
-            <div class=" mt-2">
-              <span>Role</span>
-              <input type="text" class="form-control" placeholder="role" required name="role" #role="ngModel" ngModel />
-            </div>
+
+
+
+
+
+
+
+
+
+            
+          
+
+
+
+
+
+
+
           </div>
         </div>
         <div class="col-md-6 form">
           <div>
             <div class=" mt-2">
-              <span>phone</span>
-              <input type="text" minlength="8" class="form-control" placeholder="phone" required name="phone"
+              <span>Numéro de téléphone</span><strong style="float:right;" class="alerts p" *ngIf="phone  .errors?.required && phone  ">
+                *             </strong>
+              <input type="text" minlength="8" [pattern]="emailPattern1" class="form-control" placeholder="numéro de téléphone" required name="phone"
                 #phone="ngModel" ngModel />
-              <p class="alert alert-danger" *ngIf="phone.errors?.required && phone.touched">
-                this input phone is required
-              </p>
-              <p class="alerts" *ngIf="phone.errors?.minlength && phone.touched">
-                this input must +8 caracter required
-              </p>
+                <p class="alerts p" *ngIf="phone && phone.errors?.minlength">
+                  Cette entrée doit être un numéro valide
+                </p>
             </div>
 
-            <div class="mt-2">
-              <span>adresse</span>
-              <input type="text" minlength="2" class="form-control" placeholder="adress" required name="adress"
+            <div class=" mt-2">
+              <span>Localité</span><strong style="float:right;" class="alerts p" *ngIf="adress.errors?.required && adress">
+                *             </strong>
+              <input type="text" minlength="2" class="form-control" placeholder="Localité" required name="adress"
                 #adress="ngModel" ngModel />
-              <p class="alert alert-danger" *ngIf="adress.errors?.required && adress.touched">
-                this input adress is required
-              </p>
-              <p class="alerts" *ngIf="adress.errors?.minlength && adress.touched">
-                this input must +2 caracter required
-              </p>
+              
             </div>
+            <div class=" mt-2">
+              <span>Ville</span><strong style="float:right;" class="alerts p" *ngIf="adress.errors?.required && adress">
+                *             </strong>
+              <input type="text" minlength="2" class="form-control" placeholder="ville" required name="adress"
+                #adress="ngModel" ngModel />
+              
+            </div>
+           
+            <div class="mt-2">
+              <label class="labels">Gouvernorat</label>
+              <select class=" form-control "  aria-label="labels"    >
+                <option selected>Tunis</option>
+                <option value="1">gafsa</option>
+                <option value="2">Gabes</option>
+                <option value="3">Nabel</option>
+              </select>
+            </div>
+        
+            
 
             <div class="d-flex justify-content-between align-items-center">
               <div class="text-right">
                 <br>
-                <button type="submit" class="btn btn-success register btn-block">
-                  Register
+                <button type="submit"  style="color: white; border-color: aliceblue;"  class="btn btn-info" >
+                  <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                  S'inscrire
                 </button>
               </div>
             </div>
@@ -101,79 +152,40 @@
   </div>
 </form>
 
-<!-- <section>
-  <div class="container">
-    <div class="modal-dialog " role="document">
-      <div class="modal-content">
-        <div class="modal-body">
-          <div class="column" id="main">
-            <h1>Sign Up </h1>
-            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-            <form #f="ngForm" (ngSubmit)="add(f)">
-              <div class="form-group">
-                <label for="exampleInputName">Name</label>
-                <input type="name" class="form-control "  placeholder="Name" required name="firstname" #firstname="ngModel" ngModel>
-              </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1">E-mail </label>
-                <input type="email" class="form-control"  aria-describedby="emailHelp" placeholder="E-mail" required name="email" #email="ngModel" ngModel>
-              </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1">age </label>
-                <input type="email" class="form-control"  aria-describedby="emailHelp" placeholder="age" required name="age" #age="ngModel" ngModel>
-              </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1">phone </label>
-                <input type="email" class="form-control"  aria-describedby="emailHelp" placeholder="phone" required name="phone" #phone="ngModel" ngModel>
-              </div>
-  
-              <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Sign Up</button>
-            </form>
-          </div>
-          <div>
-              <svg width="67px" height="578px" viewBox="0 0 67 578" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              Generator: Sketch 53.2 (72643) - https://sketchapp.com 
-                <title>Path</title>
-                <desc>Created with Sketch.</desc>
-                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <path d="M11.3847656,-5.68434189e-14 C-7.44726562,36.7213542 5.14322917,126.757812 49.15625,270.109375 C70.9827986,341.199016 54.8877465,443.829224 0.87109375,578 L67,578 L67,-5.68434189e-14 L11.3847656,-5.68434189e-14 Z" id="Path" fill="#F9BC35"></path>
-                </g>
-            </svg>
-          </div>
-          <div class="column" id="secondary">
-            <div class="sec-content">
-              <h2>Welcome Back!</h2>
-              <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-              <button  class="btn btn-primary">deleteZZ</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div></section>-->
 
-<!-- 
-  <form class="form-style-9">
-    <ul >
-    <li>
-        <input type="text"  class="field-style field-split align-left" placeholder="nom" required name="firstname" #firstname="ngModel" ngModel />
-        <input type="text"  class="field-style field-split align-left" placeholder="prenom" required name="lastname" #lastname="ngModel" ngModel />
-    
-        <input type="text"  class="field-style field-split align-right" placeholder="Email" required name="email" #email="ngModel" ngModel />
-    
-    </li>
-    <li>
-        <input type="text"  class="field-style field-split align-left" placeholder="Phone" required name="phone" #phone="ngModel" ngModel/>
-        <input type="text"  class="field-style field-split align-right" placeholder="age" required name="age" #age="ngModel" ngModel />
-    </li>
-    <li>
-    <input type="text"  class="field-style field-full align-none" placeholder="adresse" required name="adresse" #adresse="ngModel" ngModel/>
-    </li>
-    <li>
-    <textarea class="field-style" placeholder="Message"></textarea>
-    </li>
-    <li>
-    <input type="submit" value="Send Message" />
-    </li>
-    </ul>
-    </form> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

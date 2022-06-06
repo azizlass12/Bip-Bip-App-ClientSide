@@ -38,7 +38,7 @@ body{
   font-weight: 500;
   position: relative;
   top: 0;
-  animation:  slide 6s steps(500)  backwards  infinite ;
+  animation:  slide 6s steps(4)  backwards  infinite ;
   font-family: 'Poppins', sans-serif;
 }
 @keyframes slide {
@@ -61,7 +61,7 @@ body{
   width: 100%;
   background: 1px solid #c127a2;
   border-left: 2px solid1px solid #c127a2;
-  animation: typing 2s steps(10) infinite;
+  animation:  slide 6s steps(4)  backwards  infinite;  
   
 }
 @keyframes typing {
@@ -449,3 +449,85 @@ span a {
 
 }
 
+
+
+
+
+
+
+/* djskjb; */
+
+.card2{
+    background-color:#fff;
+    border-radius:15px;
+    border:2px solid #919ba9;
+height:300px;
+    
+}
+
+
+.text2{
+    color:#000;
+    font-weight:700;
+}
+.second{
+    color:#8b96a5;
+    
+}
+.btn-submit1{
+    border-radius:50px;
+    border:none;
+    height:35px;
+    width:120px;
+    font-size:14px;
+    background-color:#f1884d;
+    color:#fff;
+    font-weight:500;
+
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+@import url('https://fonts.googleapis.com/css?family=Acme');
+
+body {
+  background: linear-gradient(#09203F, #537895);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Acme', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.h11 {
+  color: #FFF;
+  font-size: 8rem;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  transform: rotate(-20deg) skew(25deg);
+  animation: blur 5s ease-in-out infinite;
+}
+
+@keyframes blur {
+  0%, 100% {
+    transform: rotate(-20deg) skew(25deg) translate(0,0);
+    text-shadow: -5px 5px 0 rgba(0,0,0,.2);
+  }
+  
+  50% {
+    transform: rotate(-20deg) skew(25deg) translate(50px, -50px);
+    text-shadow: -50px 50px 0 rgba(0,0,0,.2);
+    filter: blur(2px);
+  }
+}
+
+
+h1{    font-size: 2.5rem;
+  color: #ffffff;
+  background: transparent;}
+
+
+/* text-loop */
+
+  

@@ -1,0 +1,105 @@
+<form #f="ngForm" (ngSubmit)="add(f)" >
+
+    <div class="container rounded bg-white mt-5 mb-5">
+      <div class="row">
+        
+        <div class="col-md-6 border-right">
+          <div class="p-3">
+            
+            <div class="row mt-2">
+              <div class="col-md-6">
+                <label class="labels">Description</label><input type="text" class="form-control"
+                  placeholder="décrire votre colis" value="" FirstName name="FirstName" required #FirstName="ngModel" ngModel />
+              </div>
+              <div class="col-md-6">
+                <label class="labels">Nombre des pieces</label><input type="text" class="form-control" value=""
+                  placeholder="1/10/100"  name="LastName" required #LastName="ngModel" ngModel/>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-md-12">
+                <label class="labels">Longueur</label><input type="text" class="form-control" placeholder="cm/m"  name="City" required #City="ngModel" ngModel />
+              </div>
+              <div class="col-md-12">
+                <label class="labels">Largeur</label><input type="text" class="form-control" placeholder="cm/m longuer" value=""  name="Longueur" required #Longueur="ngModel" ngModel/>
+              </div>
+              <div class="col-md-6">
+                <label class="labels">Hauteur</label><input type="text" class="form-control" 
+                  placeholder="cm/m pods" value="" name="Poids" required #Poids="ngModel" ngModel />
+              </div>
+              <br />
+              <div class="col-md-6">
+                <label class="labels">Poids</label><input type="text" class="form-control"
+                  placeholder="Kg" value=""  name="Dest_FirstName" required #Dest_FirstName="ngModel" ngModel/>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-md-6">
+                <label class="labels">Nom  destinataire</label><input type="text" class="form-control"
+                  placeholder="nom  destinataire" value="" name="Dest_LastName" required #Dest_LastName="ngModel" ngModel />
+              </div>
+              <div class="col-md-6">
+                <label class="labels">Prénom  destinataire</label><input type="text" class="form-control" value=""
+                  placeholder="prénom  destinataire" />
+              </div>
+            </div>
+           
+          </div>
+        </div>
+        <div class="col-md-6 py-2">
+          <div class="p-3">
+            <div class="col-md-12">
+              <label class="labels">numéro  destinataire</label><input type="text" class="form-control"
+                placeholder="numéro  destinataire" value="" />
+            </div>
+            <div class="col-md-12 py-4">
+              <label class="labels">Gouvernorat  destinataire</label>
+              <select class=" form-control "  aria-label="labels">
+                <option  selected>Tunis</option>
+                <option value="1">gafsa</option>
+                <option value="2">Gabes</option>
+                <option value="3">Nabel</option>
+              </select>
+            </div>
+    
+    
+            <div class="col-md-12">
+              <label class="labels">Ville  destinataire</label><input type="text" class="form-control"
+                placeholder="Ville  destinataire" value="" />
+            </div>
+            <br />
+            <div class="col-md-12">
+              <label class="labels">Adresse  destinataire</label><input type="text" class="form-control"
+                placeholder="sened/gafsa" value="" />
+            </div>
+            <div class="mt-5 text-center"   >
+              
+              <button class="btn px-5 btn-primary" [disabled]="f.invalid">          Envoyer un colis
+              </button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </form>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

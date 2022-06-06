@@ -5,11 +5,11 @@
 
 * Copyright: 2019 DevCRUD (https://devcrud.com)
 * Licensed: (https://devcrud.com/licenses)
-* Coded disabledby www.devcrud.com
+* Coded disabledby www.devcrud.com col-md-6
 
 =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* d-lg The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i,900");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
@@ -1184,12 +1184,14 @@ pre code {
             flex: 0 0 41.66667%;
     max-width: 41.66667%;
   }
+  
   .col-md-6 {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 50%;
         -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
-    max-width: 50%;
+            flex: 1 0 50%;
+    min-width: 50%;
+   
   }
   .col-md-7 {
     -webkit-box-flex: 0;
@@ -2337,11 +2339,13 @@ textarea.form-control {
 }
 
 .form-check {
-  position: relative;
-  display: block;
+  float: left;
+  margin-top: 17px;
+  padding: 9px;
   padding-left: 1.25rem;
+  margin-left: 82px;
 }
-
+affix
 .form-check-input {
   position: absolute;
   margin-top: 0.3rem;
@@ -5355,6 +5359,7 @@ img:hover {
   list-style: none;
   background-color: transparent;
   border-radius: 0.17rem;
+  margin-left: -15px;
 }
 
 .breadcrumb-item + .breadcrumb-item {
@@ -6258,7 +6263,7 @@ a.close.disabled {
   pointer-events: none;
 }
 
-.toast {
+.t {
   max-width: 350px;
   overflow: hidden;
   font-size: 0.875rem;
@@ -6272,24 +6277,24 @@ a.close.disabled {
   border-radius: 0.25rem;
 }
 
-.toast:not(:last-child) {
+.t:not(:last-child) {
   margin-bottom: 0.75rem;
 }
 
-.toast.showing {
+.t.showing {
   opacity: 1;
 }
 
-.toast.show {
+.t.show {
   display: block;
   opacity: 1;
 }
 
-.toast.hide {
+.t.hide {
   display: none;
 }
 
-.toast-header {
+.t-header {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6305,7 +6310,7 @@ a.close.disabled {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.toast-body {
+.t-body {
   padding: 0.75rem;
 }
 
@@ -7499,8 +7504,17 @@ button.bg-dark:focus {
     display: inline-block !important;
   }
   .d-lg-block {
+    background: #0c213a;
     display: block !important;
-  }
+    /* padding: 25px 99px; */
+    /* padding: 3rem 6rem; */
+    padding: 16px 131px 15px 28mm;
+    margin: 20px;
+    margin-left: -87px;
+    FONT-FAMILY: monospace;
+    color: #838d8d;
+    font-size: 24px;
+}
   .d-lg-table {
     display: table !important;
   }
@@ -11388,7 +11402,7 @@ textarea {
 .page-navbar .nav-item .nav-link.active {
   color: #ff9a44;
 }
-/* 75px .sidebar */
+/* 75px .sidebar d-lg */
 .page-navbar.affix {
   min-height: 75px;
   background: rgb(255 154 68);

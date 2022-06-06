@@ -19,7 +19,7 @@ export class GurdadminGuard implements CanActivate {
       resolve (true)
     }else{
 
-this.route.navigate(['/admin/login/'])
+this.route.navigate(['/login/'])
 localStorage.removeItem('token')
 
     resolve (false)

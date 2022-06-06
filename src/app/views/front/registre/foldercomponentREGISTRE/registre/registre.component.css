@@ -1,6 +1,4 @@
-body {
-    background-color: #F50057;
-}
+
 
 .container {
     height: 100vh
@@ -13,7 +11,7 @@ body {
 
 form {
     margin-top: 24px;
-    background: #040037;
+ 
 
 }
 
@@ -24,16 +22,7 @@ form {
 
 .form-control {
     height: 50px;
-    background-color: #eee
-}
-
-.form-control:focus {
-    color: rgb(255 255 255);
-    background-color: #fff;
-    border-color: #f50057;
-    outline: 0;
-    box-shadow: none;
-    background-color: #eee;
+    background: #ffffffeb;
 }
 
 .inputbox {
@@ -43,41 +32,31 @@ form {
 .register {
     width: 200px;
     height: 51px;
-    color: rgb(255 255 255);
     background: linear-gradient(to right, #f7b733, #fc4a1a);
 
 }
 
-.register:hover {
-    width: 200px;
-    height: 51px;
-    background-color: #f50057;
-
-}
 
 
 
-
-.form-check-input:checked {
-    background-color: #761a5c;
-    border-color: #761a5c;
-}
 
 .b {
     margin-top: 40px;
+    background: #fbfbfa;
 }
-input {
-    color: white !important;
-    background-color: #040037 !important;
-}
+
 
 @media only screen and (max-width: 768px) {
     .b {
         margin-top: 337px;
     }
   }
-
-
+.p{
+  color: #ff0000;
+}
+.pGreen{
+  color: #1afc21;
+}
 
 
 /* 
@@ -182,3 +161,30 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1da36', end
 
 
 /* button */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

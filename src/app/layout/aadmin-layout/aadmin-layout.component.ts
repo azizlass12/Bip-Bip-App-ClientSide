@@ -39,12 +39,23 @@ _id:any
 
   ngOnInit(): void {
   }
+
+  // toggleSideBar(){
+  //   let e = <HTMLElement>document.querySelector('#sidebarToggle');
+  //   if (e.style.width == '0rem'){
+  //     e.style.width = '9.5rem';
+  //   }else {
+  //     e.style.width = '0rem';
+  //   }
+    
+  // }
   
 
   logout(){
     localStorage.removeItem('token')
     localStorage.removeItem('role')
     localStorage.removeItem('username')
+    localStorage.removeItem('_id')
     this.route.navigate(['/login/'])
 
   }

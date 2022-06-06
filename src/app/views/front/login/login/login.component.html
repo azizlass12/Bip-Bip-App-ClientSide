@@ -6,7 +6,8 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-7 col-xl-6 mx-auto">
-              <br />
+              <strong class="fa fa-home  " style="cursor:pointer;"  routerLink="/" >  /Home</strong>
+              <hr>
               <form  #f="ngForm" (ngSubmit)="loginadmin(f)">
                  <div class="form-group mb-3">
                   <input
@@ -29,6 +30,7 @@
                     required name="password" #password="ngModel" ngModel
                   /><br />
                 </div>
+                
                 <!-- <div class="custom-control custom-checkbox mb-3">
                   <input
                     id="customCheck1"
@@ -40,12 +42,13 @@
                     >Remember password</label
                   >
                 </div> -->
+                <div class="alert alert-danger" *ngIf="messageError">{{messageError}}</div>
                 <button
                   type="submit"
-                  class="btn btn-danger btn-block text-uppercase mb-2 rounded-pill shadow-sm"
+                  class="btn btn-bt bt btn-block text-uppercase mb-2 rounded-pill shadow-sm"
                  
                 >
-                  Sign in
+                  Login
                 </button>
                 <div class="text-center d-flex justify-content-between mt-4">
                   <p>
@@ -62,3 +65,4 @@
     </div>
   </div>
 </div>
+

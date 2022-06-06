@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthuserService } from 'src/app/views/srvices/authuser.service';
 
 @Component({
   selector: 'app-front-layout',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FrontLayoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private aus:AuthuserService) { 
+   
+  }
 
   ngOnInit(): void {
   }

@@ -30,7 +30,11 @@ export class AuthCoursierService {
 
     console.log();
   }
-  getusername() {
+  getlivrname() {
+    let name: any = localStorage.getItem('username');
+    return name;
+  }
+  getlivrrole() {
     let name: any = localStorage.getItem('username');
     return name;
   }

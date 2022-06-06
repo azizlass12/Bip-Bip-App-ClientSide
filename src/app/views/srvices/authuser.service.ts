@@ -36,6 +36,10 @@ export class AuthuserService {
     let name: any = localStorage.getItem('username');
     return name;
   }
+  getroleu(){
+    let role:any=localStorage.getItem('role')
+    return role
+  }
 
   loggedIn() {
     this.token = localStorage.getItem('token');

@@ -20,7 +20,7 @@ export class LivreursComponent implements OnInit {
   getLivreurs(){
     this.ds.getAllClient().subscribe((response: any) => {
       // get all-comman
-      this.livreursArray = response.data.data.filter((e:any) => e.role == 'employee')
+      this.livreursArray = response.data.doc.filter((e:any) => e.role == 'employee')
      
 
       // if(this.dataArray.data.role==('client')){
