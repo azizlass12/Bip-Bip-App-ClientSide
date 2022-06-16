@@ -15,7 +15,7 @@ export class DashboardComponent implements OnInit {
     this.role=this.ads.getrole()
 
     this.ds.getallcommands().subscribe((response: any) => {
-      this.dataArray = response.data.data;
+      this.dataArray = response.data.doc;
       console.log(this.dataArray);
     });
   }

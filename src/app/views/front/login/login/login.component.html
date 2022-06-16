@@ -12,12 +12,12 @@
                  <div class="form-group mb-3">
                   <input
                     id="inputEmail"
-                    type="email"
+                    type="Email"
                     placeholder="Email address"
                     required=""
                     autofocus=""
                     class="form-control rounded-pill border-0 shadow-sm px-4"
-                    required name="email" #email="ngModel" ngModel
+                    required name="Email" #Email="ngModel" ngModel
                   />
                 </div>
                 <div class="form-group mb-3">
@@ -27,7 +27,7 @@
                     placeholder="Password"
                     required=""
                     class="form-control rounded-pill border-0 shadow-sm px-4 text-danger"
-                    required name="password" #password="ngModel" ngModel
+                    required name="MotDePasse" #MotDePasse="ngModel" ngModel
                   /><br />
                 </div>
                 
@@ -51,11 +51,14 @@
                   Login
                 </button>
                 <div class="text-center d-flex justify-content-between mt-4">
-                  <p>
-                  <a routerLink="/registre" class="font-italic text-muted">
-                      <u >Créer un compte</u></a
+                  
+                  <button type="submit" routerLink="/registre" class="btn btn-bt bt1 btn-block text-uppercase mb-2 rounded-pill shadow-sm">
+                      <u >Créer un compte</u></button
                     >
-                  </p>
+
+
+
+                  
                 </div>
               </form>
             </div>

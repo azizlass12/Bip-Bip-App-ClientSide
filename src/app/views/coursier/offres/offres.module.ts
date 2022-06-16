@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { OffresRoutingModule } from './offres-routing.module';
 import { OffresComponent } from './offres/offres.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { OffresComponent } from './offres/offres.component';
   ],
   imports: [
     CommonModule,
-    OffresRoutingModule
+    OffresRoutingModule,
+    FormsModule
   ]
 })
 export class OffresModule { }

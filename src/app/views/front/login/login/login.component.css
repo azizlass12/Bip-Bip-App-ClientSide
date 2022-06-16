@@ -12,3 +12,11 @@
     background: linear-gradient(to right, #ff6241, #f22c2f);
     color:aliceblue;    
 }
+.bt1{
+    background:linear-gradient(to right, #00a314, #009720f7);
+    color:aliceblue;
+}
+.toast-right-top{
+    top: 50% !important;
+    right: 50% !important;
+}

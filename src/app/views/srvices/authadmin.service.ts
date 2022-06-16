@@ -25,7 +25,7 @@ helper=new JwtHelperService()
     return this.http.post('http://localhost:3000/v2/users/login',data)
   } 
 
-saveDataProfile(token:any,role:any,name:any,_id:any){
+saveDataProfile(token:any,role:any,Nom:any,_id:any,Prenom:any,NumeroTlf:any,Email :any){
  let decodeToken=this.helper.decodeToken(token)
  
 
@@ -33,7 +33,10 @@ saveDataProfile(token:any,role:any,name:any,_id:any){
 
   localStorage.setItem('token',token)
   localStorage.setItem('role',role)
-  localStorage.setItem('username',name)
+  localStorage.setItem('username',Nom)
+  localStorage.setItem('Prenom',Prenom)
+  localStorage.setItem('NumeroTlf',NumeroTlf)
+  localStorage.setItem('Email',Email)
   localStorage.setItem('_id',_id)
 
 
@@ -49,6 +52,18 @@ console.log()
     let name:any=localStorage.getItem('username')
     return name
  }
+ getuserprenom(){
+  let Prenom:any=localStorage.getItem('Prenom')
+  return Prenom
+}
+getusernumero(){
+  let NumeroTlf:any=localStorage.getItem('NumeroTlf')
+  return NumeroTlf
+}
+getuseremail(){
+  let Email:any=localStorage.getItem('Email')
+  return Email
+}
  getrole(){
    let role:any=localStorage.getItem('role')
    return role

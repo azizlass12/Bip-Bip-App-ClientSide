@@ -1,5 +1,5 @@
 h5{margin-top: 20px;}
-.commandes-container {
+.commandes- {
     height: 60vh;
     overflow-y: scroll;
 }
@@ -20,7 +20,7 @@ h5{margin-top: 20px;}
     }
 }
 
-@media(max-width:768px){
+@media(-width:768px){
     #post{
         width: 100%;
     }
@@ -176,7 +176,9 @@ height:300px;
     height:35px;
     width:120px;
     font-size:14px;
+    margin-left: 72px;
     font-weight:500;
+    margin-right: 40px;
 
 }
 .text2{
@@ -252,7 +254,7 @@ height:300px;
     height:35px;
     width:120px;
     font-size:14px;
-    background-color:#f1884d;
+    background-color:#000000;
     color:#fff;
     font-weight:500;
 
@@ -268,7 +270,7 @@ body{
     
 }
 .card1{
-    background-color: #142948;
+    background-color: #0e0c28;
     border-radius: 15px;
 
 }
@@ -304,15 +306,22 @@ body{
     color:#8b96a5;
     
 }
-.btn-submit1{
-    border-radius:50px;
-    border:none;
-    height:35px;
-    width:120px;
-    font-size:14px;
-    background-color:#f1884d;
-    color:#fff;
-    font-weight:500;
 
-}
 .d{flex-wrap: nowrap;}
+._ngcontent-gqb-c65{
+    color: rgb(231, 208, 208);
+    background-color: #9c7e31;
+}
+.card1{
+    min-width: 49% !important;
+}
+.class1{
+    background-color: #ecb21f;
+}
+.class2{
+    background-color: #ec1fb9;
+    
+}
+.col-md-6{
+    top: -30px !important;
+}

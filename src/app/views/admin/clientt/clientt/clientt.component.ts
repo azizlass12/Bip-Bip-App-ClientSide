@@ -1,5 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DataService } from 'src/app/views/srvices/data.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class ClienttComponent implements OnInit {
   clientsArray: any = [];
 
   messagesuccsess = '';
-  constructor(private ds: DataService) {}
+  constructor(private ds: DataService,private route:Router) {}
 
   ngOnInit(): void {
     this.getClients();
@@ -73,4 +74,13 @@ export class ClienttComponent implements OnInit {
   //         console.log(err.message)
   //          } )
   // }
+  delete(id:any,i:number){
+    this.ds.deletecUserFoeAdmin(id).subscribe(Response=>{
+      console.log(Response)
+      this.clientsArray.splice(i,1)
+    })
+    }
+    // details(id: any, i: any) {
+    //   this.route.navigate(['admin/delclient/' + id]);
+    // }
 }

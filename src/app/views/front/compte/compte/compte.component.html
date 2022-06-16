@@ -1,58 +1,54 @@
 
-    <div class="container rounded bg-white mt-5 mb-5">
+<main id="main" class="main">
+    <div class="container rounded bg-white ">
         <ng-container [formGroup]="registerForm">
         <div class="row">
-            <div class="col-md-3 border-right">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQF2psCzfbB611rnUhxgMi-lc2oB78ykqDGYb4v83xQ1pAbhPiB&usqp=CAU"><span
-                        class="font-weight-bold">Amelly</span><span class="text-black-50">amelly12@bbb.com</span><span>
-                    </span></div>
+            <div class="col-md-1 border-right">
+               
             </div>
             <div class="col-md-5 border-right">
                 <div class="p-3 ">
                     
                     <div class="row mt-2">
-                        <div class="col-md-12"><label class="labels">Name</label><input type="text" formControlName="name" class="form-control"
+                        <div class="col-md-12"><label class="labels">Nom</label><input type="text" formControlName="Nom" class="form-control"
                                 placeholder="first name" value=""></div>
-                        <!-- <div class="col-md-6"><label class="labels">Surname</label><input type="text" formControlName="email" class="form-control"
-                                value="" placeholder="surname"></div> -->
+
                     </div>
-                    <div class="row mt-3">
-                        <div class="col-md-12"><label class="labels">Phone Number</label><input type="text" formControlName="phone"
-                                class="form-control" placeholder="enter phone number" value=""></div>
-                        <div class="col-md-12"><label class="labels">Address</label><input type="text" formControlName="adress" class="form-control"
-                                placeholder="enter address" value=""></div>
-                        <div class="col-md-12"><label class="labels">Email</label><input type="text" formControlName="email" class="form-control"
-                                placeholder="enter email id" value=""></div>
+                    <div class="row mt-2">
+                        <div class="col-md-12"><label class="labels">Prenom</label><input type="text" formControlName="Prenom" class="form-control"
+                                placeholder="Prenom" value=""></div>
                      
                     </div>
                     <div class="row mt-3">
-                        <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control"
-                                placeholder="country" value=""></div>
-                        <div class="col-md-6"><label class="labels">State/Region</label><input type="text"
-                                class="form-control" value="" placeholder="state"></div>
+                        <div class="col-md-12"><label class="labels">Téléphone</label><input type="text" formControlName="NumeroTlf"
+                                class="form-control" placeholder="enter phone number" value=""></div>
+                              
+                     
                     </div>
-                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button"  type="button" (click)="updateUser()"  >Save
-                            Profile</button></div>
+                   <div class="row mt-3">
+                        <div class="col-md-6"><label class="labels">Gouvernorat</label><input type="text" formControlName="Gouvernorat" class="form-control"
+                                placeholder="country" value=""></div>
+                        <div class="col-md-6"><label class="labels">Adresse</label><input type="text" formControlName="Adresse"
+                                class="form-control" value="" placeholder="state"></div>
+                    </div> 
+                   
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="p-3 py-5">
-                    <div class="col-md-12"><label class="labels">Education</label><input type="text"
-                        class="form-control" placeholder="education" value=""></div>
-                    <div class="d-flex justify-content-between align-items-center experience"><span>Edit
-                            Experience</span><span class="border px-3 p-1 add-experience"><i
-                                class="fa fa-plus"></i>&nbsp;Experience</span></div><br>
-                    <div class="col-md-12"><label class="labels">Experience in Designing</label><input type="text"
-                            class="form-control" placeholder="experience" value=""></div> <br>
-                    <div class="col-md-12"><label class="labels">Additional Details</label><input type="text"
-                            class="form-control" placeholder="additional details" value=""></div>
+                    <div class="col-md-12"><label class="labels">Email</label><input type="text"
+                        class="form-control" placeholder="" value=""     formControlName="Email"></div>
+                 <br>
+                    <div class="col-md-12"><label class="labels">Ville</label><input type="text"
+                            class="form-control" placeholder="experience" value="" formControlName="Ville"></div> <br>
+                            <div class="mt-5 text-center"><button class="btn11 btn btn-primary profile-button"  type="button" (click)="updateUser()"  >Enregistrer</button></div>
                 </div>
+                
             </div>
         </div>
     </ng-container>
     </div>
-
+</main>
 
 
 

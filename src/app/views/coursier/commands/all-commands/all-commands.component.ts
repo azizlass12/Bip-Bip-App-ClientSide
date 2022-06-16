@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgToastService } from 'ng-angular-popup';
 import { DataService } from 'src/app/views/srvices/data.service';
+import { CommandsModule } from '../commands.module';
 
 @Component({
   selector: 'app-all-commands',
@@ -9,6 +11,7 @@ import { DataService } from 'src/app/views/srvices/data.service';
 })
 export class AllCommandsComponent implements OnInit {
   dataArray: any = [];
+  tosend: any;
   // datalivreur={
   //   FirstName:'',
   //   LastName:'',
@@ -20,13 +23,18 @@ export class AllCommandsComponent implements OnInit {
 
   // }
   // messagesuccsess=''
-  constructor(private ds: DataService) {
-    this.ds.getCommandByIdforEmp().subscribe((response: any) => {
+  constructor(private ds: DataService,private toast:NgToastService,private route :Router) {
+    this.ds.getAllOpenCommandByIdforEmp().subscribe((response: any) => {
       // get all-comman
-      this.dataArray = response.data.doc;
-      console.log(this.dataArray);
+      this.dataArray = response.data.doc.filter((e:any) => e.offres == '');
+      console.log(this.dataArray)
     });
   }
-
+  // #f="ngForm" (ngSubmit)="addMessage(f)"
   ngOnInit(): void {}
+
+     details(id:any){
+      this.route.navigate(['coursier/offres/'+id])
+    }
+
 }

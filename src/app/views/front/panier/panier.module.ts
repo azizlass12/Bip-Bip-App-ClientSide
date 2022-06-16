@@ -7,7 +7,7 @@ import { PanierComponent } from './panier/panier.component';
 
 @NgModule({
   declarations: [
-    PanierComponent
+    PanierComponent,
   ],
   imports: [
     CommonModule,

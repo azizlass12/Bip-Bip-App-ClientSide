@@ -9,7 +9,7 @@
 
 =========================================================
 
-* d-lg The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* d-lg The modal above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i,900");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
@@ -6432,19 +6432,21 @@ a.close.disabled {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
-  display: -ms-flexbox;
+  padding: 84px 0px 2px 0px;
+  /* margin: 68px 74px 23px 0px; */
+  play: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 131%;
   pointer-events: auto;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
+  border-radius: 2.0rem;
   outline: 0;
 }
 
@@ -6465,12 +6467,13 @@ a.close.disabled {
 .modal-backdrop.show {
   opacity: 0.5;
 }
-
+/* d-flex */
 .modal-header {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin-top: -45px;
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
@@ -7408,10 +7411,10 @@ button.bg-dark:focus {
 }
 
 .d-flex {
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
 }
 
 .d-inline-flex {

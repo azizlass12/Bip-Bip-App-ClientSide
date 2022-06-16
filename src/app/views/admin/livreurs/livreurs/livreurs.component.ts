@@ -20,7 +20,7 @@ export class LivreursComponent implements OnInit {
   getLivreurs(){
     this.ds.getAllClient().subscribe((response: any) => {
       // get all-comman
-      this.livreursArray = response.data.doc.filter((e:any) => e.role == 'employee')
+      this.livreursArray = response.data.doc.filter((e:any) => e.role == 'livreur')
      
 
       // if(this.dataArray.data.role==('client')){
@@ -54,4 +54,10 @@ export class LivreursComponent implements OnInit {
 //         console.log(err.message)
 //          } )
 // }
+delete(id:any,i:number){
+  this.ds.deletecUserFoeAdmin(id).subscribe(Response=>{
+    console.log(Response)
+    this.livreursArray.splice(i,1)
+  })
+  }
 }

@@ -9,6 +9,9 @@ import { DataService } from 'src/app/views/srvices/data.service';
   styleUrls: ['./create-cmd.component.css']
 })
 export class CreateCmdComponent implements OnInit {
+  ngOptions = ['Tunis','Ariana','Béja','Ben Arous','Bizerte','Gabès','Gafsa','Jendouba','Kairouan','Kasserine','Kébili','Kef','Mahdia','Manouba','Médenine','Monastir','Nabeul','Sfax','Sidi Bouzid','Siliana','Sousse','Tataouine','Tozeur','Zaghouan']
+  hh = 'Tunis';
+  
   tosend: any;
   data: any;
   message: any;

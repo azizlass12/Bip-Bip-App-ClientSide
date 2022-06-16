@@ -49,7 +49,7 @@ export class AuthCoursierService {
 
     this.role = localStorage.getItem('role');
 
-    if (this.role !== 'employee') {
+    if (this.role !== 'livreur') {
       return false;
     }
     if (this.helper.isTokenExpired(this.token)) {

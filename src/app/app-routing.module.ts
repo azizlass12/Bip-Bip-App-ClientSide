@@ -39,12 +39,15 @@ const routes: Routes = [
 
     {path:'panier',loadChildren:()=>import('./views/front/panier/panier.module').then(m=>m.PanierModule)},
     {path:'compte',loadChildren:()=>import('./views/front/compte/compte.module').then(m=>m.CompteModule)},
-    {path:'mescommande',loadChildren:()=>import('./views/front/mescommande/mescommande.module').then(m=>m.MescommandeModule)},
     {path:'contact',loadChildren:()=>import('./views/front/contact/contact.module').then(m=>m.ContactModule)},
+    {path:'offres/:id',loadChildren:()=>import('./views/front/offres/offres.module').then(m=>m.OffresModule)},
+    {path:'encours/:CommandeID/:LivreurID',loadChildren:()=>import('./views/front/encours/encours.module').then(m=>m.EncoursModule)},
+    // { path: '**', redirectTo: './views/front/encours' },detailss
+    {path:'datacmd/:id',loadChildren:()=>import('./views/front/datacmd/datacmd.module').then(m=>m.DatacmdModule)},
+    {path:'notfound',loadChildren:()=>import('./views/front/notfound/notfound.module').then(m=>m.NotfoundModule)},
+    {path:'enattente',loadChildren:()=>import('./views/front/attente/attente.module').then(m=>m.AttenteModule)},
+    {path:'livree',loadChildren:()=>import('./views/front/livree/livree.module').then(m=>m.LivreeModule)},
 
-
-    
-    
 
   ] },
 
@@ -55,17 +58,19 @@ const routes: Routes = [
   // ,
   // canActivate:[GurduserGuard]
   ,children:[
-    {path:'',loadChildren:()=>import('./views/coursier/home/home.module').then(m=>m.HomeModule)},
+    {path:'',loadChildren:()=>import('./views/coursier/commands/commands.module').then(m=>m.CommandsModule)},
 
-    {path:'home',loadChildren:()=>import('./views/coursier/home/home.module').then(m=>m.HomeModule)},
     
 
     {path:'allcommands',loadChildren:()=>import('./views/coursier/commands/commands.module').then(m=>m.CommandsModule)},
     {path:'missions',loadChildren:()=>import('./views/coursier/missions/missions.module').then(m=>m.MissionsModule)},
     {path:'comptelivreur',loadChildren:()=>import('./views/coursier/compte-livreur/compte-livreur.module').then(m=>m.CompteLivreurModule)},
     {path:'contact',loadChildren:()=>import('./views/front/contact/contact.module').then(m=>m.ContactModule)},
-    {path:'offres',loadChildren:()=>import('./views/coursier/offres/offres.module').then(m=>m.OffresModule)},
-
+    {path:'offres/:id',loadChildren:()=>import('./views/coursier/offres/offres.module').then(m=>m.OffresModule)},
+    {path:'mesoffres',loadChildren:()=>import('./views/coursier/mesoffres/mesoffres.module').then(m=>m.MesoffresModule)},
+    {path:'redirect',loadChildren:()=>import('./views/coursier/redirect/redirect.module').then(m=>m.RedirectModule)},
+    
+    
 
     
     
@@ -87,11 +92,10 @@ const routes: Routes = [
     {path:'moncompte',loadChildren:()=>import('./views/admin/moncompte/moncompte.module').then(m=>m.MoncompteModule)},
     {path:'client',loadChildren:()=>import('./views/admin/clientt/clientt.module').then(m=>m.ClienttModule)},
     {path:'details/:id',loadChildren:()=>import('./views/admin/details/details.module').then(m=>m.DetailsModule)},
-    {path:'commands/open',loadChildren:()=>import('./views/admin/opencmd/opencmd.module').then(m=>m.OpencmdModule)},
     {path:'commands/close',loadChildren:()=>import('./views/admin/closecmdd/closecmdd.module').then(m=>m.ClosecmddModule)},
     {path:'commands/livre',loadChildren:()=>import('./views/admin/livre/livre.module').then(m=>m.LivreModule)},
-    {path:'commands/attent',loadChildren:()=>import('./views/admin/attent/attent.module').then(m=>m.AttentModule)},
     {path:'messages',loadChildren:()=>import('./views/admin/messages/messages.module').then(m=>m.MessagesModule)},
+    {path:'commands/opencmd',loadChildren:()=>import('./views/admin/opencmd/opencmd.module').then(m=>m.OpencmdModule)},
 
 
 

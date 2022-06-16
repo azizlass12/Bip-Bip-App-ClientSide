@@ -1,63 +1,107 @@
-<div class="container ">
-  <div class="main =" id='main' style="margin-top: 65px;"><p>soon ...</p></div>
-</div>
-<!-- 
-    <div class="container rounded bg-white mt-5 mb-5">
-        <ng-container [formGroup]="registerForm">
-        <div class="row">
-            <div class="col-md-3 border-right">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQF2psCzfbB611rnUhxgMi-lc2oB78ykqDGYb4v83xQ1pAbhPiB&usqp=CAU"><span
-                        class="font-weight-bold">Amelly</span><span class="text-black-50">amelly12@bbb.com</span><span>
-                    </span></div>
-            </div>
-            <div class="col-md-5 border-right">
-                <div class="p-3 ">
-                    
-                    <div class="row mt-2">
-                        <div class="col-md-12"><label class="labels">Name</label><input type="text" formControlName="name" class="form-control"
-                                placeholder="first name" value=""></div>
-                        <div class="col-md-6"><label class="labels">Surname</label><input type="text" formControlName="email" class="form-control"
-                                value="" placeholder="surname"></div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-md-12"><label class="labels">Phone Number</label><input type="text" formControlName="phone"
-                                class="form-control" placeholder="enter phone number" value=""></div>
-                        <div class="col-md-12"><label class="labels">Address</label><input type="text" formControlName="adress" class="form-control"
-                                placeholder="enter address" value=""></div>
-                        <div class="col-md-12"><label class="labels">Email</label><input type="text" formControlName="email" class="form-control"
-                                placeholder="enter email id" value=""></div>
-                     
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control"
-                                placeholder="country" value=""></div>
-                        <div class="col-md-6"><label class="labels">State/Region</label><input type="text"
-                                class="form-control" value="" placeholder="state"></div>
-                    </div>
-                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button"  type="button" (click)="updateUser()"  >Save
-                            Profile</button></div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-3 py-5">
-                    <div class="col-md-12"><label class="labels">Education</label><input type="text"
-                        class="form-control" placeholder="education" value=""></div>
-                    <div class="d-flex justify-content-between align-items-center experience"><span>Edit
-                            Experience</span><span class="border px-3 p-1 add-experience"><i
-                                class="fa fa-plus"></i>&nbsp;Experience</span></div><br>
-                    <div class="col-md-12"><label class="labels">Experience in Designing</label><input type="text"
-                            class="form-control" placeholder="experience" value=""></div> <br>
-                    <div class="col-md-12"><label class="labels">Additional Details</label><input type="text"
-                            class="form-control" placeholder="additional details" value=""></div>
-                </div>
-            </div>
+<form #f="ngForm" (ngSubmit)="addoffre(f)" style="    margin-top: -34px !important;">
+  <div class=" ">
+    <div class="row">
+      <div class="col-md-6 border-right">
+        <div class="saitama">
+          <h1>Description : <p>ygjyguy</p></h1>
+
+          <p><strong>Nom-Destinataire :</strong>{{cmdArray?.NomDestinataire}}</p>
+          <p><strong>Prénom-Destinataire :</strong>{{cmdArray?.PrenomDestinataire}}</p>
+          <p><strong>Adresse-Destinataire :</strong> {{cmdArray?.AdressDestinataire}}</p>
+          <p><strong>Gouvernorat-Destinataire :</strong> {{cmdArray?.GouvernoratDestinataire}}</p>
+          <p><strong>Ville-Destinataire :</strong> {{cmdArray?.VilleDestinataire}}</p>
+          <p><strong>Numéro-Destinataire :</strong> {{cmdArray?.NumeroTlfDestinataire}}</p>
+
+         
+          <div class="genos">
+            <h2>Dimension</h2>
+            <ul>
+              <li>Poids    : <strong style="color: black;">{{ cmdArray?.Poids }}</strong> </li>
+              <li>Longueur : <strong style="color: black;">{{ cmdArray?.Longueur}}</strong> </li>
+              <li>Largeur  : <strong style="color: black;">{{ cmdArray?.Largeur}}</strong> </li>
+              <li>Hauteur  : <strong style="color: black;">{{ cmdArray?.Hauteur}}</strong> </li>
+
+            </ul>
+          </div>
         </div>
-    </ng-container>
+      </div>
+      <div class="col-md-6 py-2">
+        <div class="p-3">
+          <div class="col-md-12">
+            <label for="birthday">Date de remassage:</label>
+            <input
+              type="date"
+              id="birthday"
+              name="DateRamassage"
+              required
+              #DateRamassage="ngModel"
+              ngModel
+            />
+          </div>
+          <div class="col-md-12">
+            <label class="labels">Heure de ramassage:</label
+            ><input
+              type="text"
+              class="form-control"
+              name="HeureRamassage"
+              required
+              #HeureRamassage="ngModel"
+              ngModel
+              placeholder="PM/AM"
+              
+            />
+          </div>
+          <div class="col-md-12 py-4">
+            <label for="birthday">Date d'arrive:</label>
+            <input
+              type="date"
+              id="birthday"
+              name="DateArrive"
+              required
+              #DateArrive="ngModel"
+              ngModel
+            />
+          </div>
+          <div class="col-md-12">
+            <label class="labels">Heure d'arrive</label
+            ><input
+              type="text"
+              class="form-control"
+              name="HeureArrive"
+              required
+              #HeureArrive="ngModel"
+              ngModel
+              placeholder="PM/AM"
+              value=""
+            />
+          </div>
+
+          <div class="col-md-12">
+            <label class="labels">Montant:</label
+            ><input
+              type="text"
+              class="form-control"
+              name="montant"
+              required
+              #montant="ngModel"
+              ngModel
+              placeholder="20 dt"
+              value=""
+            />
+          </div>
+          <br />
+        
+          <div class="mt-5 text-center">
+            <button
+              style="background: #d9f8fa; border: aquamarine"
+              class="btn px-5 btn-primary"
+              [disabled]="f.invalid"
+            >
+              Publié un offre
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-
-
-
-
-
- -->
+  </div>
+</form>

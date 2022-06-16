@@ -1,0 +1,15 @@
+.btn{
+    background: #100d29 !important;
+    color: azure !important;
+    border: none !important;
+}
+.form-control{
+    background-color: #ffffff !important;
+    
+}
+.has-line:after{
+    background-color: #0f0d29;
+}
+.dashboard-ecommerce {
+    background: #eaf0fc !important;
+} 

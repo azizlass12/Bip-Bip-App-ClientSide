@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { NgToastService } from 'ng-angular-popup';
 import { DataService } from 'src/app/views/srvices/data.service';
 
 @Component({
@@ -13,13 +15,19 @@ export class CompteLivreurComponent implements OnInit {
   datauser: any;
   registerForm: FormGroup;
   _id: any;
-  constructor(private ds: DataService) {
+  constructor(private ds: DataService, private route: Router,private toast:NgToastService) {
     this.registerForm = new FormGroup({
-      name: new FormControl(),
-      email: new FormControl(),
-      role: new FormControl(),
-      phone: new FormControl(),
-      adress: new FormControl(),
+      Nom: new FormControl(),
+      Prenom: new FormControl(),
+
+      Email: new FormControl(),
+      NumeroTlf: new FormControl(),
+      Adresse: new FormControl(),
+      Gouvernorat: new FormControl(),
+
+      Ville: new FormControl(),
+
+
     });
 
     this._id = localStorage.getItem('_id');
@@ -27,12 +35,17 @@ export class CompteLivreurComponent implements OnInit {
     this.ds.getById(this._id).subscribe((response: any) => {
       // get all-comman
       this.dataArray = response.data.doc;
-      this.registerForm = new FormGroup({
-        name: new FormControl(this.dataArray ? this.dataArray.name : ''),
-        email: new FormControl(this.dataArray ? this.dataArray.email : ''),
-        role: new FormControl(this.dataArray ? this.dataArray.role : ''),
-        phone: new FormControl(this.dataArray ? this.dataArray.phone : ''),
-        adress: new FormControl(this.dataArray ? this.dataArray.adress : ''),
+      console.log(this.dataArray)
+      this.registerForm= new FormGroup({
+        Nom: new FormControl(this.dataArray ? this.dataArray.Nom : ''),
+        Prenom: new FormControl(this.dataArray ? this.dataArray.Prenom : ''),
+        Email: new FormControl(this.dataArray ? this.dataArray.Email : ''),
+        NumeroTlf: new FormControl(this.dataArray ? this.dataArray.NumeroTlf : ''),
+        Adresse: new FormControl(this.dataArray ? this.dataArray.Adresse : ''),
+        Gouvernorat: new FormControl(this.dataArray ? this.dataArray.Gouvernorat : ''),
+        Ville: new FormControl(this.dataArray ? this.dataArray.Ville : ''),
+
+
       });
     });
 
@@ -49,6 +62,8 @@ export class CompteLivreurComponent implements OnInit {
 
     this.ds.updateUser(this._id, user).subscribe((res: any)=> {
       console.log(res);
+      this.toast.success({position:'left',summary:"Modifiier  avec succés",duration:5000})
+
     });
     }
 }

@@ -6,7 +6,9 @@ body {
     
     border: none;
     box-shadow: 5px 6px 6px 2px #e9ecef;
-    border-radius: 4px;
+    border-radius: 10px;
+    background: #0e0c28;
+    color: azure;
 }
 
 
@@ -18,6 +20,7 @@ body {
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
+  color: azure;
 }
 
 .badge{
@@ -26,6 +29,7 @@ body {
         padding-right: 9px;
     padding-left: 16px;
     box-shadow: 5px 6px 6px 2px #e9ecef;
+    color: azure;
 }
 
 .user-img{
@@ -46,6 +50,7 @@ body {
     margin-top: 6px;
     margin-left: -24px !important;
     cursor: pointer;
+    color: azure;
 }
 
 
@@ -72,7 +77,11 @@ body {
 
 .reply small:hover{
 
-    color: green;
+    
     cursor: pointer;
 
+}
+.co{
+     flex: 1 0 66.66667% !important;
+     max-width: 96.66667% !important;
 }

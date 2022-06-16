@@ -12,8 +12,11 @@ export class FrontProfileLayoutComponent implements OnInit {
   username:any
   name:any
   verif: boolean;
+  role: any;
     constructor(private aus:AuthuserService,private route:Router) {
       this.username=this.aus.getusername()
+      this.role=this.aus.getroleu()
+
       if (this.aus.loggedIn()==true){
         this.verif=true
       }else{this.verif=false

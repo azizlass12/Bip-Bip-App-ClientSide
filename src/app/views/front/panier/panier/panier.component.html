@@ -1,51 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- 
 				
 				
@@ -91,28 +44,35 @@
 
 
 
-<div class=" py-4 container min-vh-100  justify-content-center align-items-center">
+<div class=" container min-vh-100  justify-content-center align-items-center " >
 	<div class="row ">
-		<div class="col-md-6 d-flex" *ngFor="let commande of commandes;index as i"
+		<div class="col-md-6 d-flex" *ngFor="let commande of commandes;index as i "  
 		
-			(click)="afficherCommandDetails(commandes._id)">
-			<div class="card1   mt-3 p-3 g-2"  >
+			>
+			<div class="card1   mt-3 p-3 g-2"   >
 				<div class="d-flex align-items-center"  >
 					<small class="first">Today at 1:30 pm</small>
 				</div>
 				<div class="mt-3">
-					<h2 class="text1">Description<br>Mobilier de maison</h2>
+					<h2 class="text1" (click)="detailsdatacmd(commande._id,i)" >Description :<br><h3 style="color: #f1ff23bf;">{{commande.Description}}</h3></h2>
 				</div>
-				<div class="detail mt-4 "><small>Nom-destinataire : {{commande.FirstName}}</small></div>
-				<div class="detail mt-2"><small>Prénom-destinataire :  {{commande.LastName}}</small></div>
-				<div class="detail mt-2"><small>Statut :  {{commande.City}}</small></div>
+				<div class="detail mt-4 "><small>Nom-destinataire : {{commande.NomDestinataire}}</small></div>
+				<div class="detail mt-2"><small>Prénom-destinataire :  {{commande.PrenomDestinataire}}</small></div>
+				<div class="detail mt-2"><small>Numéro-téléphone :  {{commande.NumeroTlfDestinataire}}</small></div>
+			
 
 
 
 
 
-				<div class="mt-3 d-flex justify-content-end px-2">
-					<button class="btn-submit" (click)="delete(commande._id,i)" >Annuler</button>
+				<div class="mt-3 d-flex justify-content-end px-2" style="padding-left: 7.5rem !important;">
+					<button class="classe"   [ngClass]="{'class1':commande.offres.length,'class2':!commande.offres.length,'class3':commande.LivreurResponsable.length }"
+					
+					
+					
+					class="btn-submit"   (click)="details(commande._id,i)" >offres</button>
+					<button class="btn-submit1" (click)="delete(commande._id,i)" >Annuler</button>
+
 					<!-- <button type="submit" (click)="delete(dataArray._id,i)" class="btn btn-danger" >Delete</button> -->
 				</div>
 
@@ -120,9 +80,10 @@
 		</div>
 
 	</div>
-
+	<!-- /request/+id -->
 
 
 
 
 </div>
+		

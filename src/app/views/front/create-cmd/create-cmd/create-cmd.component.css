@@ -1,15 +1,22 @@
-.toast-right-top.success[_ngcontent-rid-c57] {
-    border-left: 8px solid #000000;
-    background-color: #e4f8f0;
-    margin-top: 251px;
+
+.btnn{border-radius: 7px;
+    background: red;
+    color: azure;
+    padding: 6px 42px 8px 33px;
+    border: none;}
+.form-control{background-color: #ebebed !important }
+
+
+.alerts{
+    color: red;
+    float:right;    margin-top: -3px; margin-left: 9px;
 }
-
-
-
-
-
-
-
+.alerts1{
+    color: rgb(14, 13, 13);
+}
+.alerts5{
+    color: rgb(255, 0, 0);
+}
 
 
 

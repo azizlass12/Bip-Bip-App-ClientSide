@@ -191,6 +191,7 @@
             >
               <div class="nav-user-info">
                 <h6 class="mb-0 text-white nav-user-name">{{ username }}</h6>
+                
                 <!-- <span class="status"></span><span class="ml-2">{{ role }}</span> -->
               </div>
               <a routerLink="/client/compte" class="dropdown-item" href="#"
@@ -239,44 +240,25 @@
                 aria-expanded="false"
                 data-target="#submenu-1"
                 aria-controls="submenu-1"
-                routerLink="dashboard"
-                ><i class="fa fa-fw fa-user-circle"></i>Envoyer une commande
+                routerLink="createcmd"
+                ><i class="fa fa-plus"></i>Envoyer une commande
                 <span class="badge badge-success">6</span></a
               >
             </li>
 
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="#"
-                aria-expanded="false"
-                data-target="#submenu-9"
-                aria-controls="submenu-9"
-                routerLink="commands"
-                ><i class="fa fa-archive"></i>Mes Commandes</a
-              >
-            </li>
+          
 
+          
             <li class="nav-item">
-              <a
-                class="nav-link"
-                aria-expanded="false"
-                data-target="#submenu-1"
-                aria-controls="submenu-1"
-                routerLink="client"
-                ><i class="fa fa-users"></i>Suggestions
-                <span class="badge badge-success"></span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">Mes livraisons</a>
-              <div id="submenu-1-2" class="collapse submenu" style="">
+              <a routerLink="panier" class="nav-link" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2"> <i class="fa fa-shopping-cart"></i>Mes Commandes</a>
+              <div id="submenu-1-2" class="collapse submenu" >
                   <ul class="nav flex-column">
-                      <li class="nav-item">
-                          <a class="nav-link" href="index.html">En cours</a>
+                      <li class="nav-item ">
+                          <a class="nav-link " routerLink="enattente"> <i class="fa fa-hourglass-half" aria-hidden="true"></i>
+En cours</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="ecommerce-product.html">Términé</a>
+                          <a class="nav-link" routerLink="livree"><i class="fa fa-check-square" aria-hidden="true"></i>Términé</a>
                       </li>
                       
                   </ul>
@@ -290,7 +272,7 @@
                 aria-expanded="false"
                 data-target="#submenu-1"
                 aria-controls="submenu-1"
-                routerLink="messages"
+                routerLink="contact"
                 ><i class="fa fa-envelope" aria-hidden="true"></i>Envoyer un Message
                 <span class="badge badge-success">6</span></a
               >

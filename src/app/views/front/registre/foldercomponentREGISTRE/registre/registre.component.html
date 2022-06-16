@@ -9,54 +9,54 @@
         <div class="col-md-6">
           <div class="form">
             <div class="mt-2">
-              <span>Nom  </span><strong style="float:right;" class="alerts p" *ngIf="name.errors?.required && name">
+              <span>Nom  </span><strong style="float:right;" class="alerts p" *ngIf="Nom.errors?.required && Nom">
                 *             </strong>
-              <input type="text" class="form-control" placeholder="Name" name required name="name" #name="ngModel"
+              <input type="text" class="form-control" placeholder="Name" Nom required name="Nom" #Nom="ngModel"
                 ngModel />
               
                 
             </div>
             <div class="mt-2">
-              <span>Prénom </span><strong style="float:right;" class="alerts p" *ngIf="prenom.errors?.required && prenom">
+              <span>Prénom </span><strong style="float:right;" class="alerts p" *ngIf="Prenom.errors?.required && Prenom">
                 *             </strong>
-              <input type="text" class="form-control" placeholder="Prénom" prenom required name="prenom" #prenom="ngModel"
+              <input type="text" class="form-control" placeholder="Prénom" Prenom required name="Prenom" #Prenom="ngModel"
                 ngModel />
             
             </div>
  
             <div class="mt-2">
-              <span>Email</span><strong style="float:right;" class="alerts p" *ngIf="email.errors?.required && email">
+              <span>Email</span><strong style="float:right;" class="alerts p" *ngIf="Email.errors?.required && Email">
                 *             </strong>
-              <input type="email" placeholder="Email"  [pattern]="emailPattern" class="form-control"  email required name="email" #email="ngModel"
+              <input type="Email" placeholder="Email"  [pattern]="emailPattern" class="form-control"  Email required name="Email" #Email="ngModel"
                 ngModel />
-              <p class="alerts p" *ngIf="email && email.errors?.pattern">
+              <p class="alerts p" *ngIf="Email && Email.errors?.pattern">
                 Cette entrée doit être un e-mail valide
               </p>
             </div>
 
             <div class="mt-2">
-              <span>Mot de passe</span><strong style="float:right;" class="alerts p" *ngIf="password.errors?.required && password">
+              <span>Mot de passe</span><strong style="float:right;" class="alerts p" *ngIf="MotDePasse.errors?.required && MotDePasse">
                 *             </strong>
-              <input type="password" minlength="8" class="form-control" placeholder="password" required name="password"
-                #password="ngModel" ngModel />
+              <input type="MotDePasse" minlength="8" class="form-control" placeholder="MotDePasse" required name="MotDePasse"
+                #MotDePasse="ngModel" ngModel />
               
-              <p class="alerts p" *ngIf="password.errors?.minlength">
+              <p class="alerts p" *ngIf="MotDePasse.errors?.minlength">
                 cette entrée doit +8 caractères requis
               </p>
             </div>
 
-            <!-- class="alerts" *ngIf="PasswordConfirm.value !== Password.value -->
+            <!-- class="alerts" *ngIf="PasswordConfirm.value !== Password.value fa-check-circle -->
 
             <div class=" mt-2">
               <span>Confirmer Mot de passe</span>
-              <input type="password" minlength="8" class="form-control" placeholder="passwordConfirm" required
-                name="passwordConfirm" #passwordConfirm="ngModel" ngModel />
+              <input type="password" minlength="8" class="form-control" placeholder="ConfirmerMotDePasse" required
+                name="ConfirmerMotDePasse" #ConfirmerMotDePasse="ngModel" ngModel />
               <p class="alerts p" *ngIf="
-                  passwordConfirm.errors?.minlength
+                  ConfirmerMotDePasse.errors?.minlength
                 ">
                 cette entrée doit +8 caractères requis
               </p>
-              <p class="alerts p" *ngIf="passwordConfirm.value !== password.value">
+              <p class="alerts p" *ngIf="ConfirmerMotDePasse.value !== MotDePasse.value">
                 Les deux mots de passe doivent correspondre              
               </p>
              
@@ -64,10 +64,12 @@
         
             <p>Tu est ?</p>
             <label class="custom-control custom-radio custom-control-inline">
-                <input type="radio" name="radio-inline" value="client" name="role" checked="" class="custom-control-input"><span class="custom-control-label">Client</span>
+                <input required name="role"
+                #role="ngModel" ngModel type="radio" name="radio-inline" value="client" name="role" checked="" class="custom-control-input"><span class="custom-control-label">Client</span>
             </label>
             <label class="custom-control custom-radio custom-control-inline">
-                <input type="radio" name="radio-inline" class="custom-control-input" value="employee" name="role"><span class="custom-control-label">livreur</span>
+                <input required name="role"
+                #role="ngModel" ngModel type="radio" name="radio-inline" class="custom-control-input" value="livreur" name="role"><span class="custom-control-label">livreur</span>
             </label>
 
 
@@ -93,37 +95,37 @@
         <div class="col-md-6 form">
           <div>
             <div class=" mt-2">
-              <span>Numéro de téléphone</span><strong style="float:right;" class="alerts p" *ngIf="phone  .errors?.required && phone  ">
+              <span>Numéro de téléphone</span><strong style="float:right;" class="alerts p" *ngIf="NumeroTlf  .errors?.required && NumeroTlf  ">
                 *             </strong>
-              <input type="text" minlength="8" [pattern]="emailPattern1" class="form-control" placeholder="numéro de téléphone" required name="phone"
-                #phone="ngModel" ngModel />
-                <p class="alerts p" *ngIf="phone && phone.errors?.minlength">
+              <input type="text" minlength="8" [pattern]="emailPattern1" class="form-control" placeholder="numéro de téléNumeroTlf" required name="NumeroTlf"
+                #NumeroTlf="ngModel" ngModel />
+                <p class="alerts p" *ngIf="NumeroTlf && NumeroTlf.errors?.minlength">
                   Cette entrée doit être un numéro valide
                 </p>
             </div>
 
             <div class=" mt-2">
-              <span>Localité</span><strong style="float:right;" class="alerts p" *ngIf="adress.errors?.required && adress">
+              <span>Adresse</span><strong style="float:right;" class="alerts p" *ngIf="Adresse.errors?.required && Adresse">
                 *             </strong>
-              <input type="text" minlength="2" class="form-control" placeholder="Localité" required name="adress"
-                #adress="ngModel" ngModel />
+              <input type="text" minlength="2" class="form-control" placeholder="Localité" required name="Adresse"
+                #Adresse="ngModel" ngModel />
               
             </div>
             <div class=" mt-2">
-              <span>Ville</span><strong style="float:right;" class="alerts p" *ngIf="adress.errors?.required && adress">
+              <span>Ville</span><strong style="float:right;" class="alerts p" *ngIf="Ville.errors?.required && Ville">
                 *             </strong>
-              <input type="text" minlength="2" class="form-control" placeholder="ville" required name="adress"
-                #adress="ngModel" ngModel />
+              <input type="text" minlength="2" class="form-control" placeholder="ville" required name="Ville"
+                #Ville="ngModel" ngModel />
               
             </div>
            
             <div class="mt-2">
               <label class="labels">Gouvernorat</label>
-              <select class=" form-control "  aria-label="labels"    >
+              <select class=" form-control "  aria-label="labels" name="Gouvernorat" #Ville="ngModel" ngModel  >
                 <option selected>Tunis</option>
-                <option value="1">gafsa</option>
-                <option value="2">Gabes</option>
-                <option value="3">Nabel</option>
+                <option value="gafsa">gafsa</option>
+                <option value="Gabes">Gabes</option>
+                <option value="Nabel">Nabel</option>
               </select>
             </div>
         

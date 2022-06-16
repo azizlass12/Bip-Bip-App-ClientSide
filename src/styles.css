@@ -12,3 +12,14 @@
 /* body{
      overflow-y: hidden;
 } */
+
+mat-dialog-container{
+    position: fixed;
+    top: 90px;
+    background: #fff;
+    width: 50vw !important;
+    left: 30%;
+    height: 70vh !important;
+    border-radius: 30px !important;
+    overflow: hidden !important;
+}
