@@ -60,7 +60,7 @@ export class CompteLivreurComponent implements OnInit {
     let user = this.registerForm.value;
     console.log(user);
 
-    this.ds.updateUser(this._id, user).subscribe((res: any)=> {
+    this.ds.updateUser(this._id, user).subscribe((res:any)=> {
       console.log(res);
       this.toast.success({position:'left',summary:"Modifiier  avec succés",duration:5000})
 
